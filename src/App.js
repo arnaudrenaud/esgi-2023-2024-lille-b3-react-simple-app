@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import { Names } from "./Names";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -7,21 +8,24 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <button
-          onClick={function () {
-            setCount(count - 1);
-          }}
-        >
-          -
-        </button>
-        {count}
-        <button
-          onClick={function () {
-            setCount(count + 1);
-          }}
-        >
-          +
-        </button>
+        <div className="App-counter">
+          <button
+            onClick={function () {
+              setCount(count - 1);
+            }}
+          >
+            -
+          </button>
+          {count}
+          <button
+            onClick={function () {
+              setCount(count + 1);
+            }}
+          >
+            +
+          </button>
+        </div>
+        <Names />
       </header>
     </div>
   );

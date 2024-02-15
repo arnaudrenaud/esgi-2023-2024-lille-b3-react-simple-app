@@ -17,11 +17,19 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  gap: 16px;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-counter {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-link {
