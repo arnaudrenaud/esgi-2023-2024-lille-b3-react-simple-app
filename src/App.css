@@ -32,8 +32,24 @@
   justify-content: center;
 }
 
-.App-link {
+.App-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  display: flex;
+  gap: 18px;
+}
+
+.App-nav > .App-link {
   color: #61dafb;
+  padding: 18px;
+}
+
+.App-nav > .App-link.active {
+  background-color: #61dafb;
+  color: black;
 }
 
 @keyframes App-logo-spin {
