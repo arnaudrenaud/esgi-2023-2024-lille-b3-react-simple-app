@@ -1,9 +1,12 @@
 import "./App.css";
+import { useState } from "react";
 import { Counter } from "./Counter";
 import { Names } from "./Names";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -18,7 +21,10 @@ function App() {
           </nav>
 
           <Routes>
-            <Route path="/counter" element={<Counter />} />
+            <Route
+              path="/counter"
+              element={<Counter count={count} setCount={setCount} />}
+            />
             <Route path="/names" element={<Names />} />
           </Routes>
         </header>
